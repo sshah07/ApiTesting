@@ -150,12 +150,12 @@ public class RestTest
 	    public void testMockedGreetingService() {
 	        Client client = ClientFilter.newClient();
 	        Response response = ((Object) client).target("http://localhost:8080/ApiTesting/api/createproject")
-	                .queryParam("name", "peeskillet")
+	                .queryParam("name", "shachi")
 	                .request(MediaType.TEXT_PLAIN).get();
 	        Assert.assertEquals(200, response.getStatusCode());
 
 	        String msg = response.readEntity(String.class);
-	        Assert.assertEquals("Hello peeskillet", msg);
+	        Assert.assertEquals("Hello shachi", msg);
 	        System.out.println("Message: " + msg);
 
 	        response.close();
